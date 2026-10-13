@@ -1,0 +1,230 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(165, 171, 109);
+    font-family: Arial, sans-serif;
+    padding: 35px; 
+    
+}
+
+/*usando el modelo caja*/
+.contenedor {
+    width: 100%;                /*tanto width como max-width son de content, se enfocan en el texto dento de la caja, su tamaño */
+    max-width: 700px;      
+    padding: 15px;              /*colchón entre el borde del contenedor externo y la tabla, evita que la tabla toque 
+                                las paredes del cuadro contenedor.*/
+    border: 2px solid #333;   /* línea que rodea al relleno y al contenido. Puede tener grosor, estilo y color*/
+    margin: 0 auto;             /*Los px arriba/abajo separan el contenedor de los párrafos u otros bloques de la página,
+                                 y auto a los lados se encarga de centrar la caja en la pantalla.*/
+    background-color: rgb(123, 129, 72);   
+}
+
+header {
+    border-bottom: none;        /*quita cualquier borde inferior que pudiera tener*/
+    padding-bottom: 0;          /*elimina el espacio interno de abajo (el contenido queda pegado al borde inferior)*/
+    margin-bottom: 10px;        /*añade 10px de espacio externo debajo del header, separándolo del siguiente elemento.*/
+    background-color: rgb(218, 222, 174);
+}
+
+.cabecera {
+    display: flex;                      /*Hace que los elementos dentro del contenedor se comporten como elementos flexibles*/
+    justify-content: space-between;     /*Distribuye el espacio entre los elementos flexibles*/
+    align-items: center;                /*alinea los elementos flexibles en el eje principal (vertical en este caso)*/
+    border: 2px solid #333;           /*añade un borde alrededor del contenedor cabecera*/
+    padding: 10px;                      /*añade 10px de espacio interno entre el borde y el contenido*/
+}
+
+h1 {
+    font-size: 1.4rem;
+}
+
+.buscador-form {
+    display: flex;
+    gap: 5px;
+}
+
+.ver-consultas {
+    padding: 5px;
+    align-items: center; 
+    border-left: 2px solid #333;
+    border-right: 2px solid #333;
+    border-bottom: 2px solid #333;
+}
+
+.ver-consultas a{
+    color: #428bca;
+    font-size: 0.9rem;
+    
+}
+.centro {
+    display: flex;
+    gap: 3%;
+    margin-bottom: 10px;
+    background-color: rgb(123, 129, 72);
+}
+
+.columna {
+    border: 2px solid #333;
+    padding: 10px;
+    background-color: rgb(218, 222, 174);
+}
+
+.columna p{
+    font-size: 0.8rem;
+    line-height: 1.3;
+    margin-bottom: 10px;
+}
+
+.col-izquierda {
+    width: 20%;
+    height: auto;
+}
+
+.col-centro {
+    width: 54%;
+}
+
+.col-derecha {
+    width: 20%;
+}
+
+/*parte interna de main*/
+.columna h2, .columna h3 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+.columna ul {
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+.columna ul li a, a.link {
+    color: #428bca;
+    font-size: 0.9rem;
+}
+
+/*articulos*/
+.articulo {
+    margin-bottom: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.texto-izq {
+    width: 100px;            /* Antes estaba más pequeño (ej. 90px o 100px), súbelo a 140px o más */
+    flex-shrink: 0;          
+    display: flex;
+    flex-direction: column;  
+    align-items: center;      
+}
+
+.articulo img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 5px;
+    mix-blend-mode: multiply;
+}
+
+/*.articulo p {
+    font-size: 0.8rem;
+    line-height: 1.2;
+    text-align: justify;
+    margin: 0;
+}*/
+
+footer {
+    display: flex;
+    border: 2px solid #333;
+    padding: 10px;
+    justify-content: space-between;
+    background-color: rgb(218, 222, 174);
+}
+
+footer a {
+    color: #428bca;
+    font-size: 0.9rem;
+}
+
+/* --------------- ~ formulario ~ ---------------*/
+.head-form{
+    text-align: center;
+    padding: 5px 10px;
+    border: 2px solid #333;
+    background-color: rgb(218, 222, 174);
+    margin-bottom: 0;
+}
+
+.head-form h2 {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 0;
+}
+
+.forms{
+    border: 2px solid #333;
+    background-color: rgb(218, 222, 174);
+    margin-top: 5px;
+    padding: 5px;
+}
+
+.preguntas h3 {
+    text-align: center;
+}
+
+.principal fieldset {
+    border: 2px solid #333;
+    padding: 10px;              /* Espacio interno modelo de caja para que los inputs no peguen al borde */
+    background-color: rgb(218, 222, 174);
+    margin-bottom: 1px;
+}
+
+.forms {
+    
+    flex-direction: column;     
+    gap: 0.5px;                  
+}
+
+.footer-form{
+    margin-top: 15px;
+}
+
+/*---------- CALCULADORA ----------*/
+
+.subtitle {
+    padding: 10px;
+    background-color: rgb(218, 222, 174);
+    border: 2px solid #333;
+}
+
+.subtitle h2 {
+    
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.calc-field {
+    margin-bottom: 10px;
+}
+
+.calc-buttons {
+    margin: 15px 0;    
+    display: flex;
+    gap: 5px;          
+}
+
+.calc-buttons button{
+    padding: 5px 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: rgb(121, 49, 49);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
