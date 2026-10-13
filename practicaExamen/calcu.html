@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/stylex.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="contenedor">
+        <header>
+            <div class="head-form">
+                <h2>Calculadoras y funciones matemáticas</h2>
+            </div>
+        </header>
+        <main class="subtitle">
+            <h2>Calculadora Básica</h2>
+            <br>
+
+            <div class="calc-field">
+                <label>Número 1:</label>
+                <input type="text" id="num1">
+            </div>
+
+            <div class="calc-field">
+                <label>Número 2:</label>
+                <input type="text" id="num2">
+            </div>
+
+            <!-- Botones que activan cada función al hacer clic -->
+            <div class="calc-buttons">
+                <button type="button" onclick="suma()"> + </button>
+                <button type="button" onclick="resta()"> - </button>
+                <button type="button" onclick="raiz()"> √ </button>
+                <button type="button" onclick="multiplicacion()"> * </button>
+                <button type="button" onclick="division()"> / </button>
+                <button type="button" onclick="divisionUnidad()"> 1/x </button>
+            </div>
+
+            <!-- Caja donde aparece la respuesta -->
+            <div class="calc-field">
+                <label>Resultado:</label>
+                <input type="text" id="resultado" readonly>
+            </div>
+        </main>
+
+         <footer class="footer-form">
+            <div>
+                <a href="Construcc.html">Descargas</a> |
+                <a href="Construcc.html">Aplicaciones</a> |
+                <a href="Construcc.html">Dispositivos</a>
+            </div>
+            <div>
+                @Fmat
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/operaciones.js"></script>
+</body>
+</html>
